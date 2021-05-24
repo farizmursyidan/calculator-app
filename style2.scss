@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+$breakpoint-mobile: 376px;
+$main-background: hsl(0, 0%, 90%);
+$toggle-and-keypad-background: hsl(0, 5%, 81%);
+$screen-background: hsl(0, 0%, 93%);
+$key-numbers: hsl(45, 7%, 89%);
+$key-numbers-shadow: hsl(35, 11%, 61%);
+$key-del-reset: hsl(185, 42%, 37%);
+$key-del-reset-shadow: hsl(185, 58%, 25%);
+$key-equal: hsl(25, 98%, 40%);
+$key-equal-shadow: hsl(25, 99%, 27%);
+$key-text: hsl(60, 10%, 19%);
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 24px;
+  background-color: $main-background;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: $key-text;
+}
+
+.attribution a {
+  color: $key-equal;
+}
+
+.flex-container {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .screen {
+    width: 340px;
+    height: 40px;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $screen-background;
+    color: $key-text;
+    font-size: 40px;
+  }
+
+  .key {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 380px;
+    height: 360px;
+    padding: 10px;
+    background-color: $toggle-and-keypad-background;
+    margin-top: 20px;
+    border-radius: 10px;
+
+    .key-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .keys {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 72.5px;
+        height: 45px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .numbers {
+        box-shadow: 0px 3px $key-numbers-shadow;
+        background-color: $key-numbers;
+        color: $key-text;
+      }
+
+      .del-reset {
+        box-shadow: 0px 3px $key-del-reset-shadow;
+        background-color: $key-del-reset;
+        color: white;
+        font-size: 16px;
+      }
+
+      .equal-reset {
+        width: 160px;
+      }
+
+      .equal {
+        box-shadow: 0px 3px $key-equal-shadow;
+        background-color: $key-equal;
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 24px;
+
+    .calc {
+      color: $key-text;
+      font-size: 24px;
+    }
+
+    .theme {
+      display: flex;
+      align-items: flex-end;
+      text-transform: uppercase;
+      font-size: 10px;
+      color: $key-text;
+
+      .theme-numbers {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2px;
+      }
+
+      .theme-toggle {
+        background-color: $toggle-and-keypad-background;
+        width: 60px;
+        height: 20px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .red-toggle {
+          background-color: $key-equal;
+          width: 12px;
+          height: 12px;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .flex-container {
+    height: 100%;
+
+    .screen {
+      width: 70vw;
+    }
+
+    .key {
+      width: 80vw;
+
+      .key-group {
+        justify-content: space-between;
+        margin: 0px 20px;
+
+        .keys {
+          width: 55px;
+          height: 55px;
+        }
+
+        .equal-reset {
+          width: 47%;
+        }
+      }
+    }
+
+    .header {
+      width: 100%;
+      margin-top: 24px;
+
+      .calc {
+        padding-left: 20px;
+        font-size: 36px;
+      }
+
+      .theme {
+        padding-right: 20px;
+        font-size: 14px;
+
+        .theme-toggle {
+          width: 70px;
+          height: 30px;
+
+          .red-toggle {
+            width: 18px;
+            height: 18px;
+            border-radius: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .attribution {
+    margin-top: 20px;
+  }
+}

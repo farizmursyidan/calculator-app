@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 24px;
+  background-color: #160628;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: #00e0d1;
+}
+
+.flex-container {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-container .screen {
+  width: 340px;
+  height: 40px;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #1d0934;
+  color: #ffe53d;
+  font-size: 40px;
+}
+.flex-container .key {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 380px;
+  height: 360px;
+  padding: 10px;
+  background-color: #1d0934;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.flex-container .key .key-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.flex-container .key .key-group .keys {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72.5px;
+  height: 45px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.flex-container .key .key-group .numbers {
+  box-shadow: 0px 3px #871c9c;
+  background-color: #341c4f;
+  color: #ffe53d;
+}
+.flex-container .key .key-group .del-reset {
+  box-shadow: 0px 3px #bc15f4;
+  background-color: #58077d;
+  color: white;
+  font-size: 16px;
+}
+.flex-container .key .key-group .equal-reset {
+  width: 160px;
+}
+.flex-container .key .key-group .equal {
+  box-shadow: 0px 3px #6cf9f2;
+  background-color: #00e0d1;
+  color: #1b2428;
+  font-size: 16px;
+}
+.flex-container .header {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-bottom: 24px;
+}
+.flex-container .header .calc {
+  color: #ffe53d;
+  font-size: 24px;
+}
+.flex-container .header .theme {
+  display: flex;
+  align-items: flex-end;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #ffe53d;
+}
+.flex-container .header .theme .theme-numbers {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2px;
+}
+.flex-container .header .theme .theme-toggle {
+  background-color: #1d0934;
+  width: 60px;
+  height: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.flex-container .header .theme .theme-toggle .red-toggle {
+  background-color: #00e0d1;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  margin-right: 4px;
+}
+
+@media screen and (max-width: 376px) {
+  .flex-container {
+    height: 100%;
+  }
+  .flex-container .screen {
+    width: 70vw;
+  }
+  .flex-container .key {
+    width: 80vw;
+  }
+  .flex-container .key .key-group {
+    justify-content: space-between;
+    margin: 0px 20px;
+  }
+  .flex-container .key .key-group .keys {
+    width: 55px;
+    height: 55px;
+  }
+  .flex-container .key .key-group .equal-reset {
+    width: 47%;
+  }
+  .flex-container .header {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .flex-container .header .calc {
+    padding-left: 20px;
+    font-size: 36px;
+  }
+  .flex-container .header .theme {
+    padding-right: 20px;
+    font-size: 14px;
+  }
+  .flex-container .header .theme .theme-toggle {
+    width: 70px;
+    height: 30px;
+  }
+  .flex-container .header .theme .theme-toggle .red-toggle {
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    margin-right: 6px;
+  }
+
+  .attribution {
+    margin-top: 20px;
+  }
+}
+
+/*# sourceMappingURL=style3.css.map */
